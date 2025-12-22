@@ -1,0 +1,8 @@
+.profileData-container {
+    width: 200px;
+    height: 370px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
