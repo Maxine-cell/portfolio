@@ -3,6 +3,8 @@ import "./App.css";
 // import Footer from "./Components/Footer/Footer.jsx";
 import Header from "./Components/Header/Header.jsx";
 import Index from "./Components/Content/Index.jsx";
+import "./Configs/i18n.js"
+
 function App() {
   return (
     <div className="main-container size-full relative overflow-hidden bg-gray-950">

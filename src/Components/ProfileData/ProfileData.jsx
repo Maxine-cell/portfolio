@@ -3,7 +3,7 @@ import "./ProfileData.css";
 
 export default function ProfileData() {
   return (
-    <div className="profileData-container shadow-2xl rounded-xl p-6 backdrop-blur-lg border border-white/20">
+    <div className="profileData-container shadow-2xl h-96 w-44 rounded-xl p-6 backdrop-blur-lg border border-white/20">
       {/* <svg
         viewBox="0 0 200 200"
         xmlns="http://www.w3.org/2000/svg"
@@ -20,7 +20,7 @@ export default function ProfileData() {
         <h3>Fatemeh Kaboli</h3>
       <span className="text-sm opacity-80 ">Frontend Developer</span>
       </div>
-      <div className="flex justify-evenly">
+      <div className="flex gap-2 justify-evenly">
         <div
           style={{
             backgroundColor: "#fff",

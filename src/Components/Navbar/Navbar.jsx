@@ -1,26 +1,70 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Navbar.css";
 import { Tooltip } from "react-tooltip";
 import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
+import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
+import { ChevronDownIcon } from "@heroicons/react/20/solid";
+import { useTranslation } from "react-i18next";
 
 export default function Navbar() {
+  const { i18n } = useTranslation();
+  const { t } = useTranslation();
+  const [selectedLang, setSelectedLang] = useState("English");
+
   return (
-    <nav className="navbar rounded-3xl">
+    <nav className="navbar rounded-3xl flex">
+      <Menu as="div" className="relative inline-block">
+        <MenuButton className="inline-flex items-center gap-2 rounded-md bg-white/10 px-3 py-2 text-sm font-semibold text-white hover:bg-white/20">
+          {selectedLang}
+          <ChevronDownIcon className="size-4 text-gray-400" />
+        </MenuButton>
+
+        <MenuItems
+          transition
+          className="absolute right-0 z-10 mt-2 w-34 origin-top-right rounded-md bg-gray-800 outline-1 -outline-offset-1 outline-white/10 transition data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in"
+        >
+          <div className="">
+            <MenuItem>
+              <button
+                onClick={() => {
+                  i18n.changeLanguage("en");
+                  setSelectedLang("English");
+                }}
+                className="block w-full px-4 py-2 text-left text-sm text-gray-300 hover:bg-white/10"
+              >
+                English
+              </button>
+            </MenuItem>
+
+            <MenuItem>
+              <button
+                onClick={() => {
+                  i18n.changeLanguage("de");
+                  setSelectedLang("German");
+                }}
+                className="block w-full px-4 py-2 text-left text-sm text-gray-300 hover:bg-white/10"
+              >
+                German
+              </button>
+            </MenuItem>
+          </div>
+        </MenuItems>
+      </Menu>
       <ul className="navbar__list flex gap-5">
-         <li
+        <li
           className="navbar__item"
           data-tooltip-id="products"
           data-tooltip-content="See Products"
         >
-          <Link to="/contact">Contact</Link>
+          <Link to="/contact">{t("Contact")}</Link>
         </li>
         <li
           className="navbar__item"
           data-tooltip-id="products"
           data-tooltip-content="See Products"
         >
-          <Link to="/experiance">Experiance</Link>
+          <Link to="/experiance">{t("Experiance")}</Link>
         </li>
         <li
           className="navbar__item"
@@ -33,7 +77,7 @@ export default function Navbar() {
               `navbar__item ${isActive ? "navbar__item--active" : ""}`
             }
           >
-            Skills
+            {t("Skills")}
           </NavLink>
         </li>
         <li
@@ -41,7 +85,7 @@ export default function Navbar() {
           data-tooltip-id="about"
           data-tooltip-content="About Me"
         >
-          <Link to="/">About me</Link>
+          <Link to="/">{t("About me")}</Link>
         </li>
       </ul>
 
