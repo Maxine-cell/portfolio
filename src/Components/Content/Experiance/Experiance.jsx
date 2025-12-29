@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
 export default function Experiance() {
-
   const [show, setShow] = useState(false);
   const { t } = useTranslation();
 
@@ -14,7 +13,7 @@ export default function Experiance() {
   return (
     <div
       className={`
-    max-w-xl shadow-2xl rounded-xl h-96 p-6 backdrop-blur-lg border border-white/20
+    max-w-2xl shadow-2xl rounded-xl h-96 p-6 backdrop-blur-lg border border-white/20
     transition-all duration-500 ease-out
     ${show ? "translate-x-0 opacity-100" : "translate-x-20 opacity-0"}
   `}
@@ -25,31 +24,70 @@ export default function Experiance() {
           {t("Experiance")}
         </h2>
       </div>
-         <div className="mt-4">
-        <h3 className="text-base font-semibold">
-          Frontend Developer – PantoHealth
-        </h3>
-        <p className="text-sm opacity-70 mt-1">
-          Railway Monitoring Platform
-        </p>
-      </div>
+      <section className="max-h-[300px]  overflow-y-auto">
+        <div className="mt-4">
+          <h3 className="text-base font-semibold">
+            Frontend Developer – PantoHealth (Germany)
+          </h3>
+          <p className="text-sm opacity-70 mt-1">
+            Railway Monitoring Platform — Duration: 4 months
+          </p>
+        </div>
 
-      {/* Experience Details */}
-      <ul className="mt-4 space-y-2 text-sm leading-relaxed opacity-90 max-h-[260px] overflow-y-auto pr-2">
-        <li>
-          • Refactored complex UI logic in an existing React codebase
-        </li>
-        <li>
-          • Improved notification handling by restructuring components and state management
-        </li>
-        <li>
-          • Reduced coupling between UI and logic, making future changes easier
-        </li>
-        <li>
-          • Ensured backward compatibility while improving user experience
-        </li>
-      </ul>
-    {/* </div> */}
+        {/* Experience Details */}
+        <ul className="mt-4 space-y-2 text-sm leading-relaxed opacity-90 max-h-[260px] overflow-y-auto pr-2">
+          <li>
+            • Worked on a real-world railway monitoring platform used for
+            managing and visualizing train-related data
+          </li>
+          <li>
+            • Refactored complex React components to improve readability and
+            maintainability
+          </li>
+          <li>
+            • Improved notification and state handling using better component
+            structure and state management patterns
+          </li>
+          <li>
+            • Collaborated with the team to enhance UI consistency and user
+            experience
+          </li>
+          <li>
+            • Focused on performance, security considerations, and backward
+            compatibility
+          </li>
+          <li>• Helped improve UI scalability for future features</li>
+        </ul>
+        <div className="my-4 h-px w-full bg-white/10" />
+        <div className="mt-6">
+          <h3 className="text-base font-semibold">
+            Junior Developer — Iranian Software Company (Iran)
+          </h3>
+          <p className="text-sm opacity-70 mt-1">
+            Software Development Internship — Duration: X months
+          </p>
+        </div>
+        <ul className="mt-4 space-y-2 text-sm leading-relaxed opacity-90 max-h-[260px] overflow-y-auto pr-2">
+          <li>
+            • Gained a strong foundation in programming logic and
+            problem-solving concepts
+          </li>
+          <li>
+            • Worked with C# to implement basic algorithms and application logic
+          </li>
+          <li>
+            • Learned how to break down problems and design structured solutions
+          </li>
+          <li>
+            • Improved understanding of clean code principles and code
+            readability
+          </li>
+          <li>
+            • Experienced working in a real team environment and following
+            development workflows
+          </li>
+        </ul>
+      </section>
     </div>
   );
 }

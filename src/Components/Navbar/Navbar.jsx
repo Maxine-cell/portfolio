@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 import { Tooltip } from "react-tooltip";
-import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
@@ -57,14 +56,28 @@ export default function Navbar() {
           data-tooltip-id="products"
           data-tooltip-content="See Products"
         >
-          <Link to="/contact">{t("Contact")}</Link>
+          <NavLink
+            to="/contact"
+            className={({ isActive }) =>
+              `navbar__item ${isActive ? "navbar__item--active" : ""}`
+            }
+          >
+            {t("Contact")}
+          </NavLink>
         </li>
         <li
           className="navbar__item"
           data-tooltip-id="products"
           data-tooltip-content="See Products"
         >
-          <Link to="/experiance">{t("Experiance")}</Link>
+          <NavLink
+            to="/experiance"
+            className={({ isActive }) =>
+              `navbar__item ${isActive ? "navbar__item--active" : ""}`
+            }
+          >
+            {t("Experiance")}
+          </NavLink>
         </li>
         <li
           className="navbar__item"
@@ -85,7 +98,14 @@ export default function Navbar() {
           data-tooltip-id="about"
           data-tooltip-content="About Me"
         >
-          <Link to="/">{t("About me")}</Link>
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              `navbar__item ${isActive ? "navbar__item--active" : ""}`
+            }
+          >
+            {t("About me")}
+          </NavLink>
         </li>
       </ul>
 

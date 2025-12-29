@@ -13,7 +13,7 @@ export default function About() {
   return (
     <div
       className={`
-    max-w-xl min-w-xl h-96 shadow-2xl rounded-xl p-6 backdrop-blur-lg border border-white/20
+    max-w-2xl min-w-xl h-96 shadow-2xl rounded-xl p-6 backdrop-blur-lg border border-white/20
     transition-all duration-500 ease-out
     ${show ? "translate-x-0 opacity-100" : "translate-x-20 opacity-0"}
   `}

@@ -3,7 +3,7 @@ import "./ProfileData.css";
 
 export default function ProfileData() {
   return (
-    <div className="profileData-container shadow-2xl h-96 w-44 rounded-xl p-6 backdrop-blur-lg border border-white/20">
+    <div className="profileData-container shadow-2xl h-96 w-64 rounded-xl p-6 backdrop-blur-lg border border-white/20">
       {/* <svg
         viewBox="0 0 200 200"
         xmlns="http://www.w3.org/2000/svg"
@@ -15,12 +15,16 @@ export default function ProfileData() {
           transform="translate(100 100)"
         />
       </svg> */}
-      <img src="images/profilephoto.png" alt="profilePhoto" style={{width:"120px"}}/>
+      <img
+        src="images/profilephoto.png"
+        alt="profilePhoto"
+        style={{ width: "120px" }}
+      />
       <div className="text-center">
         <h3>Fatemeh Kaboli</h3>
-      <span className="text-sm opacity-80 ">Frontend Developer</span>
+        <span className="text-sm opacity-80">Frontend Developer</span>
       </div>
-      <div className="flex gap-2 justify-evenly">
+      <div className="flex gap-2 justify-evenly w-full">
         <div
           style={{
             backgroundColor: "#fff",
@@ -31,10 +35,9 @@ export default function ProfileData() {
           }}
         >
           <img src="icons/telegram.png" alt="Profile" padding="0" />
-          <span style={{fontSize:"12px"}}>Telegram</span>
-
+          <span style={{ fontSize: "12px" }}>Telegram</span>
         </div>
-         <div
+        <div
           style={{
             backgroundColor: "#fff",
             width: "30px",
@@ -44,9 +47,9 @@ export default function ProfileData() {
           }}
         >
           <img src="icons/linkedin.png" alt="Profile" padding="0" />
-          <span style={{fontSize:"12px"}}>Linkedin</span>
+          <span style={{ fontSize: "12px" }}>Linkedin</span>
         </div>
-         <div
+        <div
           style={{
             backgroundColor: "#fff",
             width: "30px",
@@ -56,8 +59,7 @@ export default function ProfileData() {
           }}
         >
           <img src="icons/telegram.png" alt="Profile" padding="0" />
-          <span style={{fontSize:"12px"}}>Github</span>
-
+          <span style={{ fontSize: "12px" }}>Github</span>
         </div>
       </div>
     </div>
