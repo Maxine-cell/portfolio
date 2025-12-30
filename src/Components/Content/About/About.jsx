@@ -29,36 +29,29 @@ export default function About() {
       {/* About Text */}
       <section className="max-h-[300px]  overflow-y-auto">
         <p className="text-white-500 mt-4 text-sm leading-relaxed">
-          <span className="block mb-2 font-medium opacity-90">
-            React • Tailwind • UI-Focused
-          </span>
-          I’m a Junior Frontend Developer specializing in building modern,
-          responsive web applications with React and Tailwind. I have hands-on
-          experience developing real-world projects, including AI-powered tools
-          and video streaming platforms, with a strong focus on security,
-          performance, and user experience. I thrive in collaborative
-          environments and enjoy solving challenging problems.
+          {t(
+            "I’m a Junior Frontend Developer specializing in building modern, responsive web applications with React. I have hands-on experience developing real-world projects, including AI-powered tools and video streaming platforms, and have worked in both local and international team environments. I’m familiar with using AI tools in the development process and focus on building secure, performant, and user-friendly interfaces. I enjoy collaborating with teams and solving challenging problems."
+          )}
         </p>
-
         {/* Divider */}
         <div className="my-4 h-px w-full bg-white/10" />
 
         {/* Education */}
         <div>
-          <h3 className="text-sm font-semibold opacity-80 mb-2">Education</h3>
+          <h3 className="text-sm font-semibold opacity-80 mb-2">{t("Education")}</h3>
           <p className="text-sm opacity-90">M.Sc. in Software Engineering</p>
         </div>
 
         {/* Personal Info */}
         <div className="mt-4 grid grid-cols-2 gap-y-2 text-sm">
-          <span className="opacity-70">Birth Date</span>
+          <span className="opacity-70">{t("Birth Date")}</span>
           <span>27 March 2000</span>
 
-          <span className="opacity-70">Location</span>
+          <span className="opacity-70">{t("Location")}</span>
           <span>Mazandaran, Iran</span>
 
-          <span className="opacity-70">Marital Status</span>
-          <span>Single</span>
+          <span className="opacity-70">{t("Marital Status")}</span>
+          <span>{t("Single")}</span>
         </div>
       </section>
     </div>

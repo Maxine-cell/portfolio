@@ -22,12 +22,26 @@ export default function Skills() {
   ];
   const tools = [
     "Git / GitHub / GitHub Desktop",
-    "Figma",
     "Vercel",
+    "Cursor",
     "Clickup",
+    "Figma",
   ];
-  const interpersonal = ["Problem solving","Debugging", "Attention to Detail" ,"Collabration","REST API", "Responsive Design", "UI/UX Principles"];
+  const interpersonal = [
+    "Problem solving",
+    "Debugging",
+    "Attention to Detail",
+    "Collabration",
+    "REST API",
+    "Responsive Design",
+    "UI/UX Principles",
+  ];
   // const stateManagement = ["Redux", "Zustand", "React Query"];
+  const SoftSkills = [
+    "Team Collaboration",
+    "Communication",
+    "Attention to Detail",
+  ];
 
   const renderSkills = (skills) =>
     skills.map((skill) => (
@@ -52,24 +66,34 @@ export default function Skills() {
           {t("Skills")}
         </h2>
       </div>
-     <section className="max-h-[300px]  overflow-y-auto">
-       <div className="mb-4">
-        <h3 className="text-sm font-medium opacity-80 pt-4 pb-2">Technical</h3>
-        <div className="flex flex-wrap gap-2">
-          {renderSkills(technicalSkills)}
+      <section className="max-h-[300px]  overflow-y-auto">
+        <div className="mb-4">
+          <h3 className="text-sm font-medium opacity-80 pt-4 pb-2">
+            {t("Technical")}
+          </h3>
+          <div className="flex flex-wrap gap-2">
+            {renderSkills(technicalSkills)}
+          </div>
         </div>
-      </div>
-      <div className="mb-4">
-        <h3 className="text-sm font-medium opacity-80 pt-4 pb-2">Tools</h3>
-        <div className="flex flex-wrap gap-2">{renderSkills(tools)}</div>
-      </div>
-      <div className="mb-4">
-        <h3 className="text-sm font-medium opacity-80 pt-4 pb-2">
-          Interpersonal
-        </h3>
-        <div className="flex flex-wrap gap-2">{renderSkills(interpersonal)}</div>
-      </div>
-     </section>
+        <div className="mb-4">
+          <h3 className="text-sm font-medium opacity-80 pt-4 pb-2">{t("Tools")}</h3>
+          <div className="flex flex-wrap gap-2">{renderSkills(tools)}</div>
+        </div>
+        <div className="mb-4">
+          <h3 className="text-sm font-medium opacity-80 pt-4 pb-2">
+            {t("Interpersonal")}
+          </h3>
+          <div className="flex flex-wrap gap-2">
+            {renderSkills(interpersonal)}
+          </div>
+        </div>
+        <div className="mb-4">
+          <h3 className="text-sm font-medium opacity-80 pt-4 pb-2">
+            {t("Soft Skills")}
+          </h3>
+          <div className="flex flex-wrap gap-2">{renderSkills(SoftSkills)}</div>
+        </div>
+      </section>
     </div>
   );
 }

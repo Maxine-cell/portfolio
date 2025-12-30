@@ -1,21 +1,26 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import "./Navbar.css";
 import { Tooltip } from "react-tooltip";
 import { NavLink } from "react-router-dom";
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { useTranslation } from "react-i18next";
+import { useTranslationStore } from "../../Stores/Translation.ts";
 
 export default function Navbar() {
   const { i18n } = useTranslation();
   const { t } = useTranslation();
-  const [selectedLang, setSelectedLang] = useState("English");
+  const { language, toggleLanguage } = useTranslationStore();
+
+  useEffect(() => {
+    i18n.changeLanguage(language);
+  }, [language, i18n]);
 
   return (
     <nav className="navbar rounded-3xl flex">
       <Menu as="div" className="relative inline-block">
         <MenuButton className="inline-flex items-center gap-2 rounded-md bg-white/10 px-3 py-2 text-sm font-semibold text-white hover:bg-white/20">
-          {selectedLang}
+          {language === "en" ? "English" : "German"}
           <ChevronDownIcon className="size-4 text-gray-400" />
         </MenuButton>
 
@@ -26,10 +31,7 @@ export default function Navbar() {
           <div className="">
             <MenuItem>
               <button
-                onClick={() => {
-                  i18n.changeLanguage("en");
-                  setSelectedLang("English");
-                }}
+                onClick={() => toggleLanguage()}
                 className="block w-full px-4 py-2 text-left text-sm text-gray-300 hover:bg-white/10"
               >
                 English
@@ -38,10 +40,7 @@ export default function Navbar() {
 
             <MenuItem>
               <button
-                onClick={() => {
-                  i18n.changeLanguage("de");
-                  setSelectedLang("German");
-                }}
+                onClick={() => toggleLanguage()}
                 className="block w-full px-4 py-2 text-left text-sm text-gray-300 hover:bg-white/10"
               >
                 German

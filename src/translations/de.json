@@ -2,5 +2,22 @@
   "About me": "Über mich",
   "Skills": "Fähigkeiten",
   "Projects": "Projekte",
-  "Contact": "Kontakt"
+  "Contact": "Kontakt",
+  "I’m a Junior Frontend Developer specializing in building modern, responsive web applications with React. I have hands-on experience developing real-world projects, including AI-powered tools and video streaming platforms, and have worked in both local and international team environments. I’m familiar with using AI tools in the development process and focus on building secure, performant, and user-friendly interfaces. I enjoy collaborating with teams and solving challenging problems.": "Ich bin ein Junior Frontend Developer, der sich auf die Entwicklung moderner und responsiver Webanwendungen mit React spezialisiert hat. Ich habe praktische Erfahrung in der Umsetzung realer Projekte, darunter KI-gestützte Tools und Video-Streaming-Plattformen, und habe sowohl in lokalen als auch in internationalen Teams gearbeitet. Ich bin mit dem Einsatz von KI-Tools im Entwicklungsprozess vertraut und lege großen Wert auf sichere, performante und benutzerfreundliche Oberflächen. Ich arbeite gerne im Team und löse mit Begeisterung anspruchsvolle Aufgaben.",
+  "Education": "Ausbildung",
+  "Experience": "Erfahrung",
+  "Intern Developer — Owj Company (Iran)": "Praktikant Entwickler — Owj Unternehmen (Iran)",
+  "Junior Developer — Iranian Software Company (Iran)": "Junior Entwickler — Iranische Softwarefirma (Iran)",
+  "Software Development Internship — Duration: 6 months": "Praktikum in der Softwareentwicklung — Dauer: 6 Monate",
+  "Technical": "Technische",
+  "Interpersonal": "Zwischenmenschliche",
+  "Soft Skills": "Soziale Kompetenzen",
+  "Team Collaboration": "Teamarbeit",
+  "Communication": "Kommunikation",
+  "Attention to Detail": "Detailgenauigkeit",
+  "Birth Date" : "Geburtsdatum",
+  "Location" : "Ort",
+  "Marital Status" : "Familienstand",
+  "Single" : "Ledig",
+  "Tools": "Werkzeuge"
 }

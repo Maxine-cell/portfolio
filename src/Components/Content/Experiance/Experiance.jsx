@@ -61,10 +61,10 @@ export default function Experiance() {
         <div className="my-4 h-px w-full bg-white/10" />
         <div className="mt-6">
           <h3 className="text-base font-semibold">
-            Junior Developer — Iranian Software Company (Iran)
+            Intern Developer — Owj Company (Iran)
           </h3>
           <p className="text-sm opacity-70 mt-1">
-            Software Development Internship — Duration: X months
+            Software Development Internship — Duration: 6 months
           </p>
         </div>
         <ul className="mt-4 space-y-2 text-sm leading-relaxed opacity-90 max-h-[260px] overflow-y-auto pr-2">
