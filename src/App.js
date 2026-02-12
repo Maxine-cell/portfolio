@@ -5,7 +5,7 @@ import "./Configs/i18n.js";
 
 function App() {
   return (
-    <div className="main-container size-full relative overflow-hidden bg-gray-950">
+  <div className="main-container size-full relative overflow-hidden bg-gray-950">
       {/* 3D Background Container */}
       <div className="scene">
         <div className="cube-container">
