@@ -34,8 +34,14 @@ export default function ProfileData() {
             margin: "0",
           }}
         >
-          <img src="icons/telegram.png" alt="Profile" padding="0" />
-          <span style={{ fontSize: "12px" }}>Telegram</span>
+          <a
+            href="https://t.me/fatemehkaboli"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="icons/telegram.png" alt="Telegram" padding="0" />
+            <span style={{ fontSize: "12px" }}>Telegram</span>
+          </a>
         </div>
         <div
           style={{
@@ -46,8 +52,14 @@ export default function ProfileData() {
             margin: "0",
           }}
         >
-          <img src="icons/linkedin.png" alt="Profile" padding="0" />
-          <span style={{ fontSize: "12px" }}>Linkedin</span>
+          <a
+            href="https://www.linkedin.com/in/fatemeh-kaboli-ab722a245/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="icons/linkedin.png" alt="Telegram" padding="0" />
+            <span style={{ fontSize: "12px" }}>Linkedin</span>
+          </a>
         </div>
         <div
           style={{
@@ -58,8 +70,14 @@ export default function ProfileData() {
             margin: "0",
           }}
         >
-          <img src="icons/telegram.png" alt="Profile" padding="0" />
-          <span style={{ fontSize: "12px" }}>Github</span>
+           <a
+            href="https://github.com/Maxine-cell"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="icons/telegram.png" alt="Telegram" padding="0" />
+            <span style={{ fontSize: "12px" }}>Github</span>
+          </a>
         </div>
       </div>
     </div>

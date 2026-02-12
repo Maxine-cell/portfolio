@@ -1,10 +1,10 @@
-import React from "react";
 import HeadingDecoration from "./../../HeadingDecoration/HeadingDecoration";
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function Contact() {
   const [show, setShow] = useState(false);
-
+  const { t } = useTranslation();
   useEffect(() => {
     setShow(true);
   }, []);
@@ -20,23 +20,23 @@ export default function Contact() {
       <div className="flex">
         <HeadingDecoration />
         <h2 className="absolute text-xl font-semibold text-right mt-1 ml-6">
-          Contact
+          {t("Contact")}
         </h2>
       </div>
       <form className="mt-4 space-y-4">
         <input
           type="text"
-          placeholder="Your name"
+          placeholder={t("Your name")}
           className="w-full rounded-lg bg-white/5 border border-white/10 px-4 py-2 text-white placeholder-white/40 focus:outline-none focus:border-white/30"
         />
         <input
           type="email"
-          placeholder="Your email"
+          placeholder={t("Your email")}
           className="w-full rounded-lg bg-white/5 border border-white/10 px-4 py-2 text-white placeholder-white/40 focus:outline-none focus:border-white/30"
         />
         <textarea
           rows="4"
-          placeholder="Your message"
+          placeholder={t("Your message")}
           className="w-full rounded-lg bg-white/5 border border-white/10 px-4 py-2 text-white placeholder-white/40 resize-none focus:outline-none focus:border-white/30"
         />
 
@@ -44,7 +44,7 @@ export default function Contact() {
           type="submit"
           className="w-full rounded-lg bg-white/20 py-2 text-white font-medium hover:bg-white/30 transition"
         >
-          Send message
+          {t("Send message")}
         </button>
       </form>
     </div>

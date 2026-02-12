@@ -21,7 +21,7 @@ export default function Experiance() {
       <div className="flex">
         <HeadingDecoration />
         <h2 className="absolute text-xl font-semibold text-right mt-1 ml-6">
-          {t("Experiance")}
+          {t("Experience")}
         </h2>
       </div>
       <section className="max-h-[300px]  overflow-y-auto">
@@ -35,28 +35,38 @@ export default function Experiance() {
         </div>
 
         {/* Experience Details */}
-        <ul className="mt-4 space-y-2 text-sm leading-relaxed opacity-90 max-h-[260px] overflow-y-auto pr-2">
+        <ul className="mt-4 space-y-2 text-sm leading-relaxed opacity-90 max-h-[260px] pr-2">
           <li>
-            • Worked on a real-world railway monitoring platform used for
-            managing and visualizing train-related data
+            •{" "}
+            {t(
+              "Worked on a real-world railway monitoring platform used for managing and visualizing train-related data"
+            )}
           </li>
           <li>
-            • Refactored complex React components to improve readability and
-            maintainability
+            •{" "}
+            {t(
+              "Refactored complex React components to improve readability and maintainability"
+            )}
           </li>
           <li>
-            • Improved notification and state handling using better component
-            structure and state management patterns
+            •{" "}
+            {t(
+              "Improved notification and state handling using better component structure and state management patterns"
+            )}
           </li>
           <li>
-            • Collaborated with the team to enhance UI consistency and user
-            experience
+            •{" "}
+            {t(
+              "Collaborated with the team to enhance UI consistency and user experience"
+            )}
           </li>
           <li>
-            • Focused on performance, security considerations, and backward
-            compatibility
+            •{" "}
+            {t(
+              "Focused on performance, security considerations, and backward compatibility"
+            )}
           </li>
-          <li>• Helped improve UI scalability for future features</li>
+          <li>• {t("Helped improve UI scalability for future features")}</li>
         </ul>
         <div className="my-4 h-px w-full bg-white/10" />
         <div className="mt-6">
@@ -69,22 +79,34 @@ export default function Experiance() {
         </div>
         <ul className="mt-4 space-y-2 text-sm leading-relaxed opacity-90 max-h-[260px] overflow-y-auto pr-2">
           <li>
-            • Gained a strong foundation in programming logic and
-            problem-solving concepts
+            •{" "}
+            {t(
+              "Gained a strong foundation in programming logic and problemb solving concepts"
+            )}
           </li>
           <li>
-            • Worked with C# to implement basic algorithms and application logic
+            •{" "}
+            {t(
+              "Worked with C# to implement basic algorithms and application logic"
+            )}
           </li>
           <li>
-            • Learned how to break down problems and design structured solutions
+            •{" "}
+            {t(
+              "Learned how to break down problems and design structured solutions"
+            )}
           </li>
           <li>
-            • Improved understanding of clean code principles and code
-            readability
+            •{" "}
+            {t(
+              "Improved understanding of clean code principles and code readability"
+            )}
           </li>
           <li>
-            • Experienced working in a real team environment and following
-            development workflows
+            •{" "}
+            {t(
+              "Experienced working in a real team environment and following development workflows"
+            )}
           </li>
         </ul>
       </section>

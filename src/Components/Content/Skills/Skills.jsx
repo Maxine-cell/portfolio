@@ -14,7 +14,7 @@ export default function Skills() {
     "JavaScript",
     "Zustand",
     "React Query",
-    "Redux",
+    // "Redux",
     "Tailwind",
     "Bootstrap",
     "CSS",
