@@ -1,9 +1,7 @@
 import "./App.css";
-// import ThreeJS from "./App.jsx";
-// import Footer from "./Components/Footer/Footer.jsx";
 import Header from "./Components/Header/Header.jsx";
 import Index from "./Components/Content/Index.jsx";
-import "./Configs/i18n.js"
+import "./Configs/i18n.js";
 
 function App() {
   return (
@@ -33,9 +31,8 @@ function App() {
         </div>
       </div>
 
-      {/* Add your content here */}
+      {/* content here */}
       <div className="relative z-10 size-full">
-        {/* Your content goes here */}
         <Header />
         <Index />
       </div>
