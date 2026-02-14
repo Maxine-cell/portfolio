@@ -1,32 +1,43 @@
-import { Canvas, useFrame } from "@react-three/fiber";
-import { OrbitControls, Sparkles } from "@react-three/drei";
-import { useRef } from "react";
+import "./App.css";
+import Header from "./Components/Header/Header.jsx";
+import Index from "./Components/Content/Index.jsx";
+import "./Configs/i18n.js";
 
-const RotatingCube = () => {
-  const meshRef = useRef();
-
-  useFrame(() => {
-    meshRef.current.rotation.x += 0.01;
-    meshRef.current.rotation.y += 0.01;
-  });
-
+function App() {
   return (
-    <mesh ref={meshRef}>
-      <cylinderGeometry args={[1, 1, 1]} />
-      <meshLambertMaterial color="red" emissive="#468585"/>
-      <Sparkles count={100} scale={1} size={6} speed={0.002} noise={0.2} color="orange" />
-    </mesh>
-  );
-};
+  <div className="main-container size-full relative overflow-hidden bg-gray-950">
+      {/* 3D Background Container */}
+      <div className="scene">
+        <div className="cube-container">
+          {/* Multiple floating cubes */}
+          {[...Array(8)].map((_, i) => (
+            <div
+              key={i}
+              className="cube"
+              style={{
+                animationDelay: `${i * 0.5}s`,
+                left: `${(i % 4) * 25 + 10}%`,
+                top: `${Math.floor(i / 4) * 40 + 20}%`,
+              }}
+            >
+              <div className="cube-face front"></div>
+              <div className="cube-face back"></div>
+              <div className="cube-face right"></div>
+              <div className="cube-face left"></div>
+              <div className="cube-face top"></div>
+              <div className="cube-face bottom"></div>
+            </div>
+          ))}
+        </div>
+      </div>
 
-const ThreeJS = () => {
-  return (
-    <Canvas style={{ height: "100vh", width: "100vw" }}>
-      <OrbitControls />
-      <directionalLight position={[1, 1, 1]} intensity={1} />
-      <RotatingCube />
-    </Canvas>
+      {/* content here */}
+      <div className="relative z-10 size-full">
+        <Header />
+        <Index />
+      </div>
+    </div>
   );
-};
+}
 
-export default ThreeJS;
+export default App;
