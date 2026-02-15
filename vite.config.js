@@ -1,6 +1,6 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import path from 'path'; // برای تنظیم alias (اختیاری)
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import path from "path"; // برای تنظیم alias (اختیاری)
 
 export default defineConfig({
   plugins: [react()],
@@ -9,12 +9,12 @@ export default defineConfig({
     open: true, // به محض اجرا، مرورگر را باز کن
   },
   build: {
-    outDir: 'build', // پوشه خروجی را مانند CRA روی build قرار بده
+    outDir: "dist", // عوضش کن به dist
   },
   resolve: {
     alias: {
       // این قسمت اختیاری است، اگر در پروژه از '@' به عنوان میانبر برای پوشه src استفاده کرده‌اید
-      '@': path.resolve(__dirname, './src'),
+      "@": path.resolve(__dirname, "./src"),
     },
   },
 });
